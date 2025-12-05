@@ -1,7 +1,5 @@
 # 🌐 App-Multi : Application Multi-Page Angular
 
-![Angular Banner](https://raw.githubusercontent.com/angular/angular/main/docs/images/logos/angular/angular.png)
-
 ---
 
 ## 🎯 Objectif général
