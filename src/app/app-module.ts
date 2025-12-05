@@ -6,12 +6,14 @@ import { App } from './app';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Header } from './component/header/header';
 import { PageTableMult } from './page-table-mult/page-table-mult';
+import { Footer } from './component/footer/footer';
 
 @NgModule({
   declarations: [
     App,
     Header,
-    PageTableMult
+    PageTableMult,
+    Footer
   ],
   imports: [
     BrowserModule,
