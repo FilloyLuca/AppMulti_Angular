@@ -3,18 +3,17 @@
         <a class="navbar-brand" href="#">
             <h1 class="text-warning">MultiApp</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bstarget="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" arialabel="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>   
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" ariaCurrentWhenActive="page" routerLink="/table-multiplication"
-                        routerLinkActive="active">
+                    <a class="nav-link" aria-current="page" routerLink="/table-multiplication" routerLinkActive="active">
                         Table Multiplication
                     </a>
                 </li>
@@ -26,21 +25,50 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
+
+            <!-- Formulaire de recherche -->
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" arialabel="Search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
+
+                <!-- Bouton Easter Egg caché à côté du bouton de recherche -->
+                <button id="easterEggButton" class="text-dark" style="display: none;" type="button">
+                    Easter Egg
+                </button>
             </form>
         </div>
     </div>
 </nav>
+
+<!-- Image d'Einstein -->
+<script>
+    // Afficher le bouton Easter Egg après un délai
+    setTimeout(function () {
+        const easterEggButton = document.getElementById('easterEggButton');
+        if (easterEggButton) {
+            easterEggButton.style.display = 'inline-block';  // Le bouton devient visible
+        }
+    }, 3000); // Le bouton devient visible après 3 secondes
+
+    // Action lorsque le bouton Easter Egg est cliqué
+    document.getElementById('easterEggButton').addEventListener('click', function () {
+        alert("Voici votre Easter Egg!");
+
+        // Afficher l'image d'Einstein
+        let einsteinImage = new Image();
+        einsteinImage.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Albert_Einstein_Head.jpg/800px-Albert_Einstein_Head.jpg';
+        einsteinImage.alt = "Albert Einstein";
+        einsteinImage.style.width = "300px";  // Taille de l'image
+
+        // Afficher l'image sur la page
+        document.body.appendChild(einsteinImage);
+    });
+</script>

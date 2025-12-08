@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easter Egg Einstein</title>
+  <style>
+    /* Style pour le bouton caché */
+    #easterEggButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ffcc00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none; /* Cache le bouton au départ */
+    }
+  </style>
+</head>
+<body>
+  <!-- Bouton caché -->
+  <button id="easterEggButton">Cliquez pour l'Easter Egg !</button>
+
+  <!-- Contenu de la page (quelque chose de normal) -->
+  <div>
+    <h1>Bienvenue sur la page !</h1>
+    <p>Explorez et découvrez des surprises cachées.</p>
+  </div>
+
+  <!-- Image d'Einstein cachée -->
+  <script>
+    // Afficher le bouton après un certain délai
+    setTimeout(function() {
+      document.getElementById('easterEggButton').style.display = 'block';
+    }, 3000); // Le bouton devient visible après 3 secondes
+
+    // Action lorsque le bouton est cliqué
+    document.getElementById('easterEggButton').addEventListener('click', function() {
+      // Créer une alerte avec l'image d'Einstein
+      alert("Voici votre Easter Egg!");
+
+      // Afficher une image d'Einstein dans une alerte personnalisée
+      let einsteinImage = new Image();
+      einsteinImage.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Albert_Einstein_Head.jpg/800px-Albert_Einstein_Head.jpg';
+      einsteinImage.alt = "Albert Einstein";
+      einsteinImage.style.width = "300px";  // Taille de l'image
+
+      // Créer une boîte modale ou une fenêtre pour afficher l'image (en utilisant une alerte classique ici)
+      let message = "Voici une image d'Albert Einstein !";
+      alert(message);
+      document.body.appendChild(einsteinImage);
+    });
+  </script>
+</body>
+</html>
