@@ -8,6 +8,8 @@ import { Header } from './component/header/header';
 import { PageTableMult } from './page-table-mult/page-table-mult';
 import { Footer } from './component/footer/footer';
 import { TableMultiplication } from './component/table-multiplication/table-multiplication';
+import { FormsModule } from '@angular/forms'; // Ajouter FormsModule
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TableMultiplication } from './component/table-multiplication/table-mult
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule // Importer FormsModule
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

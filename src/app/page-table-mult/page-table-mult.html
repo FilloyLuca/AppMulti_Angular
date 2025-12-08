@@ -1,35 +1,13 @@
-<!-- <app-table-multiplication></app-table-multiplication>
+<!-- <app-table-multiplication></app-table-multiplication> -->
 
-<app-table-multiplication [n]="3"></app-table-multiplication> -->
 
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="1"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="2"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="3"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="4"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="5"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="6"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="7"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="8"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="9"></app-table-multiplication>
-</span>
-<span style="display:inline-block; margin-right:20px;">
-  <app-table-multiplication [n]="10"></app-table-multiplication>
-</span>
+<div class="container">
+  <h2>Choisissez le nombre de tables de multiplication à afficher</h2>
+  <!-- Champ de saisie pour le nombre de tables -->
+  <input type="number" [(ngModel)]="numberOfTables" class="form-control" min="1" max="20" />
 
+  <div class="mt-3" style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <!-- Affichage des tables de multiplication -->
+    <app-table-multiplication *ngFor="let _ of [].constructor(numberOfTables); let tableIndex = index" [n]="tableIndex + 1" style="flex: 1 1 calc(10% - 10px); min-width: 90px;"></app-table-multiplication>
+  </div>
+</div>

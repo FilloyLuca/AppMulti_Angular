@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class PageTableMult {
 
+  // Propriété pour stocker le nombre de tables de multiplication
+  numberOfTables: number = 1;
+
 }
