@@ -11,6 +11,7 @@ import { TableMultiplication } from './component/table-multiplication/table-mult
 import { FormsModule } from '@angular/forms'; // Ajouter FormsModule
 
 
+
 @NgModule({
   declarations: [
     App,
@@ -23,7 +24,7 @@ import { FormsModule } from '@angular/forms'; // Ajouter FormsModule
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule // Importer FormsModule
+    FormsModule
 
   ],
   providers: [
